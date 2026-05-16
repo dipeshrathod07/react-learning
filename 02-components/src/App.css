@@ -1,0 +1,40 @@
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  font-size: 36px;
+}
+
+.header p,
+.footer p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.profile-card {
+  padding: 24px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.profile-card h2 {
+  margin: 0 0 12px;
+}
+
+.profile-card p {
+  margin: 8px 0;
+}
+
+.footer {
+  margin-top: 24px;
+}
+

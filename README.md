@@ -40,6 +40,11 @@ react-learning/
 |   |-- src/
 |   `-- public/
 |-- 02-components/
+|   |-- README.md
+|   `-- examples/
+|       |-- StatelessFunctionalComponent.jsx
+|       |-- StatefulClassComponent.jsx
+|       `-- FunctionalComponentWithState.jsx
 |-- 03-props/
 |-- 04-state/
 `-- README.md
@@ -66,6 +71,17 @@ Topics covered:
 ### 02 - Components
 
 Components are reusable parts of the UI.
+
+Topics covered:
+
+- What is a component?
+- Why components are used
+- Stateless functional component
+- Stateful class component
+- Functional component with state
+- Common mistakes
+- Best practices
+- Interview questions
 
 Example:
 
