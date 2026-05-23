@@ -1,0 +1,115 @@
+<svg width="1100" height="520" viewBox="0 0 1100 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">React Component Lifecycle Diagram</title>
+  <desc id="desc">A visual diagram showing mounting, updating, and unmounting lifecycle flow in React class components.</desc>
+  <defs>
+    <linearGradient id="mountHeader" x1="170" y1="70" x2="390" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08785F"/>
+      <stop offset="1" stop-color="#064D42"/>
+    </linearGradient>
+    <linearGradient id="updateHeader" x1="445" y1="70" x2="665" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1768B8"/>
+      <stop offset="1" stop-color="#104B82"/>
+    </linearGradient>
+    <linearGradient id="unmountHeader" x1="720" y1="70" x2="940" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9B3D1D"/>
+      <stop offset="1" stop-color="#742711"/>
+    </linearGradient>
+    <linearGradient id="greenDot" x1="0" y1="0" x2="18" y2="18" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B7F8D3"/>
+      <stop offset="1" stop-color="#2BCB7F"/>
+    </linearGradient>
+    <linearGradient id="blueDot" x1="0" y1="0" x2="18" y2="18" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A8C9FF"/>
+      <stop offset="1" stop-color="#4C7DDA"/>
+    </linearGradient>
+    <linearGradient id="redDot" x1="0" y1="0" x2="18" y2="18" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF9AB1"/>
+      <stop offset="1" stop-color="#E13C61"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L7,3 z" fill="#9B9B9B"/>
+    </marker>
+    <style>
+      .bg { fill: #1E1E1E; }
+      .title { fill: #F6F0E7; font: 700 24px Georgia, serif; }
+      .rule { stroke: #3A3A3A; stroke-width: 1; }
+      .stage { fill: #D7E1EA; font: 700 20px Arial, sans-serif; }
+      .method { fill: #C8DED7; font: 700 18px Arial, sans-serif; }
+      .method-blue { fill: #C8DAF2; font: 700 18px Arial, sans-serif; }
+      .method-red { fill: #F0C4B5; font: 700 18px Arial, sans-serif; }
+      .note { fill: #78D2B2; font: 700 15px Arial, sans-serif; }
+      .note-blue { fill: #9DBFE8; font: 700 15px Arial, sans-serif; }
+      .note-red { fill: #EFB092; font: 700 15px Arial, sans-serif; }
+      .label { fill: #D4D4D4; font: 700 15px Arial, sans-serif; }
+      .arrow { stroke: #9B9B9B; stroke-width: 1.6; marker-end: url(#arrow); }
+      .dash { stroke: #555555; stroke-width: 1.5; stroke-dasharray: 6 6; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1100" height="520"/>
+  <text class="title" x="95" y="43">Here's a visual diagram of the full lifecycle flow:</text>
+
+  <rect x="160" y="90" width="220" height="46" rx="9" fill="url(#mountHeader)" stroke="#1CA98C" filter="url(#shadow)"/>
+  <circle cx="224" cy="113" r="9" fill="url(#greenDot)"/>
+  <text class="stage" x="239" y="120">Mounting</text>
+
+  <rect x="440" y="90" width="220" height="46" rx="9" fill="url(#updateHeader)" stroke="#4C92DE" filter="url(#shadow)"/>
+  <circle cx="503" cy="113" r="9" fill="url(#blueDot)"/>
+  <text class="stage" x="518" y="120">Updating</text>
+
+  <rect x="720" y="90" width="220" height="46" rx="9" fill="url(#unmountHeader)" stroke="#D36B3F" filter="url(#shadow)"/>
+  <circle cx="784" cy="113" r="9" fill="url(#redDot)"/>
+  <text class="stage" x="799" y="120">Unmounting</text>
+
+  <line class="rule" x1="160" y1="154" x2="940" y2="154"/>
+
+  <rect x="160" y="180" width="220" height="66" rx="9" fill="#075B4A" stroke="#159B83"/>
+  <text class="method" x="270" y="208" text-anchor="middle">constructor()</text>
+  <text class="note" x="270" y="231" text-anchor="middle">Init state and bindings</text>
+
+  <line class="arrow" x1="270" y1="246" x2="270" y2="276"/>
+
+  <rect x="160" y="278" width="220" height="66" rx="9" fill="#075B4A" stroke="#159B83"/>
+  <text class="method" x="270" y="306" text-anchor="middle">render()</text>
+  <text class="note" x="270" y="329" text-anchor="middle">Returns JSX to DOM</text>
+
+  <line class="arrow" x1="270" y1="344" x2="270" y2="374"/>
+
+  <rect x="160" y="376" width="220" height="66" rx="9" fill="#075B4A" stroke="#159B83"/>
+  <text class="method" x="270" y="403" text-anchor="middle">componentDidMount()</text>
+  <text class="note" x="270" y="426" text-anchor="middle">API calls, subscriptions</text>
+
+  <rect x="440" y="180" width="220" height="66" rx="9" fill="#14548B" stroke="#4C92DE"/>
+  <text class="method-blue" x="550" y="207" text-anchor="middle">shouldComponentUpdate()</text>
+  <text class="note-blue" x="550" y="230" text-anchor="middle">Allow re-render?</text>
+
+  <line class="arrow" x1="550" y1="246" x2="550" y2="276"/>
+
+  <rect x="440" y="278" width="220" height="66" rx="9" fill="#14548B" stroke="#4C92DE"/>
+  <text class="method-blue" x="550" y="306" text-anchor="middle">render()</text>
+  <text class="note-blue" x="550" y="329" text-anchor="middle">Re-renders with new data</text>
+
+  <line class="arrow" x1="550" y1="344" x2="550" y2="374"/>
+
+  <rect x="440" y="376" width="220" height="66" rx="9" fill="#14548B" stroke="#4C92DE"/>
+  <text class="method-blue" x="550" y="403" text-anchor="middle">componentDidUpdate()</text>
+  <text class="note-blue" x="550" y="426" text-anchor="middle">React to state/prop changes</text>
+
+  <line class="arrow" x1="380" y1="409" x2="440" y2="409"/>
+  <text class="label" x="410" y="397" text-anchor="middle">Props/state</text>
+  <text class="label" x="410" y="415" text-anchor="middle">change</text>
+
+  <rect x="720" y="278" width="220" height="66" rx="9" fill="#843216" stroke="#D36B3F"/>
+  <text class="method-red" x="830" y="306" text-anchor="middle">componentWillUnmount()</text>
+  <text class="note-red" x="830" y="329" text-anchor="middle">Cleanup: timers, listeners</text>
+
+  <line class="arrow" x1="660" y1="311" x2="720" y2="311"/>
+  <text class="label" x="690" y="299" text-anchor="middle">Removed</text>
+  <text class="label" x="690" y="317" text-anchor="middle">from DOM</text>
+
+  <line class="dash" x1="550" y1="442" x2="550" y2="490"/>
+  <path class="dash" d="M160 490H940"/>
+</svg>
